@@ -1,0 +1,230 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, 
+input, 
+textarea,
+button{
+    outline: unset;
+    text-decoration: unset;
+
+    color: black;
+
+    border: unset;
+}
+
+.block-none{
+    display: none !important;
+}
+
+html:root{
+    /* UI Backgrounds */
+    --ui-bg-main: #98C956;
+    --ui-bg-form: #58A547;
+
+    /* UI :classes */
+    --ui-form-hover: #15532E;
+    --ui-link-hover: #15532E;
+    --ui-form-focus: #28705C;
+
+    /* UI colors */
+    --ui-color-text: #0e520e;
+    --ui-color-links: #326b32;
+    --ui-color-form: #e3e3e3;
+}
+
+body{
+    background-color: var(--ui-bg-main);
+}
+.backscroll{
+    position: relative;
+    bottom: 20px;
+    right: 200px;
+
+    padding: 5px 15px;
+    
+    text-align: left;
+}
+
+
+
+.form__elem-title{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    color: var(--ui-color-text);
+}
+.main__wrapper{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+    
+    background-color: var(--ui-bg-main);
+}
+.form__wrapper
+{
+    margin-top: 15px;
+}
+.form__elem-wrapper
+{
+    margin-bottom: 15px;
+}
+.form__elem-input{
+    width: 400px;
+    height: 30px;
+
+    padding: 3px 15px;
+
+    background-color: var(--ui-bg-main);
+    border-bottom: 2px solid var(--ui-bg-form);
+
+    color: var(--ui-color-form);
+}
+.form__elem-input::placeholder{
+    color: var(--ui-color-text);
+}
+.form__elem-input:hover{
+    border-bottom: 2px solid var(--ui-form-hover);
+    color: #008000;
+}
+.form__elem-input:focus{
+    border-bottom: 2px solid var(--ui-form-focus);
+}
+
+.form__link 
+{
+    color: var(--ui-color-links);
+}
+.form__link:hover,
+.form__link:focus{
+    border-bottom: 1px solid var(--ui-link-hover);
+}
+.form__elem-buttons{
+    margin-bottom: 45px;
+}
+.form__elem-button{
+    width: 200px;
+    height: 30px;
+
+    background-color: var(--ui-bg-form);
+
+    color: var(--ui-color-form);
+
+    float: right;
+
+}
+.form__elem-button:hover,
+.form__elem-button:focus{
+    background-color: var(--ui-form-hover);
+}
+
+
+.form__elem-files .btn-tertiary
+{
+    color: black;
+    padding: unset;
+    line-height: 40px;
+    width: 200px;
+    display: block;
+    border-bottom: 2px solid var(--ui-bg-form);
+
+    text-align: left;
+
+    margin: 20px auto;
+}
+.form__elem-files .btn-tertiary:hover,.example-2 .btn-tertiary:focus
+{
+    color: green;
+    border-color: var(--ui-form-hover);
+}
+.form__elem-files .input-file
+{
+    width: .1px;
+    height: .1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.form__elem-files .input-file + .js-labelFile
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.form__elem-files .input-file + .js-labelFile .icon:before
+{
+    content: "\f093";
+}
+.form__elem-files .input-file + .js-labelFile.has-file .icon:before
+{
+    content: "\f00c";
+    color: var(--ui-form-focus);
+}
+
+.form__block{
+    padding: 40px;
+    margin: 50px auto;
+
+    box-shadow: 2px 5px 10px #15532E;
+
+    color: var(--ui-color-text);
+}
+
+.form__elem-checkbox{
+    text-align: left !important;
+}
+
+.more__buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    text-align: center;
+    align-items: center;
+    padding: 0 20px;
+}
+.cnange-lang{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+
+    appearance: none;
+    outline: 0;
+
+    background: url('../../img/select-ico.svg') no-repeat right center;
+
+    padding: 5px 10px;
+
+    border: 1px solid var(--ui-form-hover);
+    background-color: var(--ui-bg-main);
+    border-radius: 10px;
+}
+
+.error__block{
+    margin-top: 30px;
+
+    border: 2px solid var(--ui-color-text);
+    padding: 20px 10px;
+}
+.error__text{
+    width: 400px;
+}
+.menu__link{
+    padding: 5px;
+}
+.menu__link:hover,
+.menu__link:focus{
+    border-bottom: 1px solid var(--ui-form-hover);
+}

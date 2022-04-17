@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация • PROект</title>
+    <link rel="stylesheet" href="../assets/css/modules/_profile-module.css">
+    <link rel="shortcut icon" href="../assets/img/glogo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <main class="main__wrapper">
+            <section class="content">
+                <div class="form__wrapper">
+                    <section class="form__block">
+                        <a class="backscroll" href="../index.html" title="Вернуться назад">
+                            <img src="../assets/img/Arrow 1.png" alt="">
+                        </a>
+                        <form action="../assets/hangler/reg.php" method="post" enctype="multipart/form-data">
+                            <legend class="form__elem-title lng-title">
+                                Регистрация Antiquariat ID
+                            </legend>
+                            <div class="form__elem-data">
+                                <p class="form__elem-wrapper">
+                                    <input class="form__elem-input lng-nick" type="text" name="name" id="user-nick" placeholder="Ваше имя">
+                                </p>
+                                <p class="form__elem-wrapper">
+                                    <input class="form__elem-input lng-login" type="text" name="login" id="user-login" placeholder="Ваш логин" required>
+                                </p>
+                                <p class="form__elem-wrapper">
+                                    <input class="form__elem-input" type="email" name="email" id="user-email" placeholder="e-mail" required>
+                                </p>
+                                <div class="form__elem-files">
+                                <div class="form-group">
+                                    <input type="file" name="file" id="file" class="input-file">
+                                    <label for="file" class="btn btn-tertiary js-labelFile">
+                                    <i class="icon fa fa-check"></i>
+                                    <span class="js-fileName lng-load">Загрузить файл</span>
+                                    </label>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="form__elem-sequrite">
+                                <p class="form__elem-wrapper">
+                                    <input class="form__elem-input lng-pass" type="password" name="password" id="user-pass" placeholder="Придумайте пароль" required>
+                                </p>
+                                <p class="form__elem-wrapper">
+                                    <input class="form__elem-input lng-conf-pass" type="password" name="confirm-password" id="user-conf-pass" placeholder="Повторите пароль" required>
+                                </p>
+                            </div>
+                            <div class="form__elem-checkbox">
+                                <p class="form__elem-wrapper">
+                                    <input class="form__elems-checkbox" type="checkbox" name="reg-confirm" id="user-reg-confirm">
+                                    <label for="user-reg-confirm">
+                                        <a class="form__link lng-confid" href="#">Я принимаю политику и конфинденциальность сайта</a>
+                                    </label>
+                                </p>
+                                <p class="form__elem-wrapper">
+                                    <input class="form__elems-checkbox" type="checkbox" name="session-save" id="user-session-save">
+                                    <label class="lng-save" for="user-session-save" title="Ваша сессия(авторизация на сайте) сохранится на 24 часа">
+                                        Запомнить пароль.
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="form__elem-buttons">
+                                <p class="form__elem-wrapper">
+                                    <button class="form__elem-button lng-btn-reg" type="submit" name="btn-register" id="form-btn-register">Зарегистрироваться</button>
+                                </p>
+                            </div><br>
+                            <div class="form__elem-hrefs">
+                                <p><span class="lng-inf">Есть аккаунт</span>? &#8594;
+                                    <a class="form__link lng-auth" href="#">Авторизуйся</a>!
+                                </p>
+                            </div>
+
+                            <section class="error__block block-none" id="err-bl">
+                                <h3 class="error__title">
+
+                                </h3>
+                                <p class="error__text">
+
+                                </p>
+                            </section>
+                            
+                        </form>
+                    </section>
+                    <div class="more__buttons">
+                        <div class="button__left">
+                            <a class="menu__link lng-home" href="#">На главную</a>
+                            <a class="menu__link lng-about" href="#">О нас</a>
+                            <a class="menu__link lng-bug" href="#">Нашли баг?</a>
+                        </div>
+                        <div class="button__right">
+                            <span class="lng-lang">Сменить язык:</span>
+                            <select class="cnange-lang" name="lang" id="lng-change">
+                                <option selected>reset</option>
+                                <option value="ru">RU</option>
+                                <option value="en">EN</option>
+                                <option value="de">DE</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/modules/lang-change-reg.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script lang="js">
+        (function() {
+            'use strict';
+            
+            $('.input-file').each(function() {
+                var $input = $(this),
+                    $label = $input.next('.js-labelFile'),
+                    labelVal = $label.html();
+                
+                $input.on('change', function(element) {
+                var fileName = '';
+                if (element.target.value) fileName = element.target.value.split('\\').pop();
+                fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
+                });
+            });
+            
+            })();
+    </script>
+</body>
+</html>

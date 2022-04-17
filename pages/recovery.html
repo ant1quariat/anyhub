@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация • PROект</title>
+    <link rel="stylesheet" href="../assets/css/modules/_profile-module.css">
+    <link rel="shortcut icon" href="../assets/img/glogo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <main class="main__wrapper">
+            <section class="content">
+                <div class="form__wrapper">
+                    <section class="form__block">
+                        <a class="backscroll" href="../index.html" title="Вернуться назад">
+                            <img src="../assets/img/Arrow 1.png" alt="">
+                        </a>
+                        <form action="#" method="post" enctype="multipart/form-data">
+                            <legend class="form__elem-title">
+                                Восстановление доступа
+                            </legend>
+                            <div class="form__elem-data">
+                                <p class="form__elem-wrapper">
+                                    <input class="form__elem-input" type="email" name="email-recovery" id="user-login" placeholder="E-mail" required>
+                                </p>
+                            </div>
+                            <div class="form__elem-checkbox">
+                                <p class="form__elem-wrapper">
+                                    <input class="form__elems-checkbox" type="checkbox" name="session-save" id="user-session-save">
+                                    <label for="user-session-save" title="Ваша сессия(авторизация на сайте) сохранится на 24 часа">
+                                        Я не робот.
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="form__elem-buttons">
+                                <p class="form__elem-wrapper">
+                                    <input class="form__elem-button" type="submit" name="btn-recovery" id="form-btn-auth" value="Далее">
+                                </p>
+                            </div><br>
+                            <div class="form__elem-hrefs">
+                                <p>Нет аккаунта? &#8594;
+                                    <a class="form__link" href="#">Зарегистрируйся</a>!
+                                </p>
+                                <p>Есть аккаунт? &#8594;
+                                    <a class="form__link" href="#">Авторизуйся!</a>
+                                </p>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script lang="js">
+        (function() {
+            'use strict';
+            
+            $('.input-file').each(function() {
+                var $input = $(this),
+                    $label = $input.next('.js-labelFile'),
+                    labelVal = $label.html();
+                
+                $input.on('change', function(element) {
+                var fileName = '';
+                if (element.target.value) fileName = element.target.value.split('\\').pop();
+                fileName ? $label.addClass('has-file').find('.js-fileName').html(fileName) : $label.removeClass('has-file').html(labelVal);
+                });
+            });
+            
+            })();
+    </script>
+</body>
+</html>

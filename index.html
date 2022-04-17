@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROект</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/glogo.png" type="image/x-icon">
 </head>
 <body>
     <div class="wrapper">
         <header class="header__wrapper">
+            <div class="left__button">
+
+            </div>
             <div class="header__logo">
-                Logo
+                <img src="assets/img/logo1.png" alt="">
             </div>
             <div class="header__menu">
-                Menu
+                <a class="footer__link" onclick="elemClose('navbar')">
+                    Menu
+                </a>
             </div>
         </header>
         <main class="main__wrapper">
@@ -24,29 +30,67 @@
                     </h1>
                 </div>
             </section>
-            <section class="navigation">
-                 <div class="navigation__news">
-                    <ul>
-                        <li class="navigation__news-element">
-                            Li_content-1
-                        </li>
-                        <li class="navigation__news-element">
-                            Li_content-2
-                        </li>
-                        <li class="navigation__news-element">
-                            Li_content-3
-                        </li>
-                        <li class="navigation__news-element">
-                            Li_content-4
-                        </li>
-                    </ul>
-                 </div>
+            <section class="navigation" id="navbar">
+                <span class="navigation__title">Site Menu</span>
+                <div class="navigation__site">
+                    <a class="navigation__news-element">
+                        Home
+                    </a>
+                    <a class="navigation__news-element" href="pages/news.php">
+                        News
+                    </a>
+                    <a class="navigation__news-element" href="pages/about.html">
+                        About Us
+                    </a>
+                    <a class="navigation__news-element" href="pages/contacts.html">
+                        Contacts
+                    </a>
+                    </div>
+                    <hr class="menu__hr">
+                    <span class="navigation__title">User Profiles</span>
+                    <div class="account__site">
+                    <a class="navigation__news-element" href="pages/auth.html">
+                        Sign In
+                    </a>
+                    <a class="navigation__news-element" href="pages/register.html">
+                        Sign Up
+                    </a>
+                </div>
+                <hr class="menu__hr">
+                <span class="navigation__title">Site Categories</span>
+                <div class="navigation__category">
+                    <a href="#" class="navigation__news-element" id="ct1">Category 1</a>
+                    <a href="#" class="navigation__news-element" id="ct2">Category 2</a>
+                    <a href="#" class="navigation__news-element" id="ct3">Category 3</a>
+                    <a href="#" class="navigation__news-element" id="ct4">Category 4</a>
+                    <a href="#" class="navigation__news-element" id="ct5">Category 5</a>
+                    <a href="#" class="navigation__news-element" id="ct6">Category 6</a>
+                    <a href="#" class="navigation__news-element" id="ct7">Category 7</a>
+                    <a href="#" class="navigation__news-element" id="ct8">Category 8</a>
+                    <a href="#" class="navigation__news-element" id="ct9">Category 9</a>
+                    <a href="#" class="navigation__news-element" id="ct10">Category 10</a>
+                </div>
+                <hr class="menu__hr">
             </section>
         </main>
         <footer class="footer__wrapper">
-            3
+            <div class="scroll__up">
+                <a class="scrollUp" onclick="ScrollUp();">
+                    <img src="assets/img/up 2.png" alt="">
+                </a>
+            </div>
+            <div class="footer__logo">
+                <span class="logo--text">
+                    (c) 2022 
+                    <a class="footer__link scroll_top" href="#">CUMпания</a>
+                </span>
+            </div>
+            <div class="footer__links">
+
+            </div>
         </footer>
     </div>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.js"></script>
 </body>
 </html>
